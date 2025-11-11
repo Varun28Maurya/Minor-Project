@@ -4,6 +4,7 @@ import googleLogo from "../Assests/google.jpg";
 import githubLogo from "../Assests/github.png";
 import linkedinLogo from "../Assests/linkedin.webp";
 import axios from "axios";
+const API = process.env.REACT_APP_API_URL;
 const AuthForm = () => {
   const [isSignup, setIsSignup] = useState(false);
   const navigate = useNavigate();
@@ -12,7 +13,6 @@ const AuthForm = () => {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
-    const API = process.env.REACT_APP_API_URL;
 
     try {
       const res = await axios.post(`${API}/api/auth/login`, {
@@ -40,7 +40,6 @@ const AuthForm = () => {
     const password = document.getElementById("signup-password").value;
 
     try {
-      const API = process.env.REACT_APP_API_URL;
       const res = await axios.post(`${API}/api/auth/register`, {
         username,
         email,
@@ -351,3 +350,4 @@ bg-white/80 px-1 rounded"
 };
 
 export default AuthForm;
+
