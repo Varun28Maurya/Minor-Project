@@ -25,7 +25,7 @@ export default function ProfilePage() {
     };
 
     fetchProfile();
-  }, []);
+  }, [API]);
 
   if (loading) {
     return (
@@ -173,5 +173,6 @@ export default function ProfilePage() {
     </div>
   );
 }
+
 
 
