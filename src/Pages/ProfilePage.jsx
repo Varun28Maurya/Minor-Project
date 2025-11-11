@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const API = process.env.REACT_APP_API_URL;
 export default function ProfilePage() {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -7,7 +8,6 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const API = process.env.REACT_APP_API_URL;
         const userId = localStorage.getItem("userId");
         const res = await fetch(`${API}/api/profile/${userId}`);
         const data = await res.json();
@@ -172,3 +172,4 @@ export default function ProfilePage() {
     </div>
   );
 }
+
