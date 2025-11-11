@@ -9,7 +9,7 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       try {
         const storedUser = JSON.parse(localStorage.getItem("user"));
-        const userId = storedUser?._id;
+        const userId = storedUser?.id;
         const res = await fetch(`${API}/api/profile/${userId}`);
         const data = await res.json();
         if (res.ok && data.profile) {
@@ -173,6 +173,7 @@ export default function ProfilePage() {
     </div>
   );
 }
+
 
 
 
