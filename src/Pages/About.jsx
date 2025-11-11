@@ -37,7 +37,7 @@ const webInfo = {
     ],
     contact: {
         email: "varun28maurya@gmail.com",
-        github: "https://github.com/your-repo",
+        github: "https://github.com/Varun28Maurya/Minor-Project",
         website: "https://your-site.com",
     },
 };
@@ -159,3 +159,4 @@ const About = () => {
 };
 
 export default About;
+
