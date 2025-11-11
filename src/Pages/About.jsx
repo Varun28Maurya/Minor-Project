@@ -38,7 +38,7 @@ const webInfo = {
     contact: {
         email: "varun28maurya@gmail.com",
         github: "https://github.com/your-repo",
-        website: "https://your-site.com",
+        website: "https://trackathon-three.vercel.app",
     },
 };
 
@@ -159,3 +159,4 @@ const About = () => {
 };
 
 export default About;
+
