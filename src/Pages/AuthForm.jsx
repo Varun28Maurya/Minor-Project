@@ -40,6 +40,7 @@ const AuthForm = () => {
     const password = document.getElementById("signup-password").value;
 
     try {
+      const API = process.env.REACT_APP_API_URL;
       const res = await axios.post(`${API}/api/auth/register`, {
         username,
         email,
@@ -350,3 +351,4 @@ bg-white/80 px-1 rounded"
 };
 
 export default AuthForm;
+
