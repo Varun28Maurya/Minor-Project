@@ -8,7 +8,8 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const userId = localStorage.getItem("userId");
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+        const userId = storedUser?._id;
         const res = await fetch(`${API}/api/profile/${userId}`);
         const data = await res.json();
         if (res.ok && data.profile) {
@@ -172,4 +173,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
 
